@@ -3695,6 +3695,156 @@ a:hover .arrow {
 }
 
 /* ============================= */
+/* MOBILE NAVIGATION */
+/* ============================= */
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu-button {
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid var(--line);
+  border-radius: 50%;
+
+  background: transparent;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 5px;
+
+  cursor: pointer;
+
+  position: relative;
+  z-index: 120;
+}
+
+.mobile-menu-button span {
+  width: 15px;
+  height: 1px;
+
+  display: block;
+
+  background: var(--text);
+
+  transition:
+    transform 200ms ease,
+    opacity 200ms ease;
+}
+
+.mobile-menu-button.open span:first-child {
+  transform:
+    translateY(3px)
+    rotate(45deg);
+}
+
+.mobile-menu-button.open span:last-child {
+  transform:
+    translateY(-3px)
+    rotate(-45deg);
+}
+
+.mobile-menu-panel {
+  position: fixed;
+
+  top: 66px;
+  left: 0;
+  right: 0;
+
+  padding:
+    28px 20px 35px;
+
+  background:
+    var(--background);
+
+  border-top:
+    1px solid var(--line);
+
+  border-bottom:
+    1px solid var(--line);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform:
+    translateY(-15px);
+
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease,
+    visibility 220ms ease;
+}
+
+.mobile-menu-panel.open {
+  opacity: 1;
+  visibility: visible;
+
+  transform:
+    translateY(0);
+}
+
+.mobile-nav-links {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.mobile-nav-links a {
+  min-height: 62px;
+
+  border-bottom:
+    1px solid var(--line);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  font-size: 1.25rem;
+
+  font-weight: 650;
+
+  letter-spacing: -0.03em;
+}
+
+.mobile-nav-links a span {
+  color: var(--accent);
+
+  font-size: 0.58rem;
+
+  letter-spacing: 0.12em;
+}
+
+.mobile-cv {
+  margin-top: 25px;
+
+  min-height: 48px;
+
+  width: 100%;
+
+  border-radius: 999px;
+
+  background: var(--accent);
+
+  color: var(--accent-text);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 0.8rem;
+
+  font-weight: 750;
+}
+
+/* ============================= */
 /* RESPONSIVE */
 /* ============================= */
 
@@ -3745,6 +3895,18 @@ a:hover .arrow {
     display:
       none;
   }
+
+  .mobile-menu {
+  display: block;
+}
+
+.mobile-menu-button {
+  display: flex;
+}
+
+.nav-cv {
+  display: none;
+}
 
   .hero {
     min-height:
@@ -3919,9 +4081,8 @@ a:hover .arrow {
   }
 
   .nav-shell {
-    position:
-      absolute;
-  }
+  position: fixed;
+}
 
   .navbar {
     height:

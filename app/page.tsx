@@ -1,4 +1,5 @@
 import ThemeToggle from "@/components/ThemeToggle";
+import MobileMenu from "@/components/MobileMenu";
 
 const skills = {
   Lenguajes: [
@@ -228,16 +229,18 @@ export default function Home() {
           </div>
 
           <div className="nav-actions">
-            <ThemeToggle />
+  <ThemeToggle />
 
-            <a
-              className="nav-cv"
-              href="/cv.pdf"
-            >
-              Ver CV
-              <Arrow />
-            </a>
-          </div>
+  <a
+    className="nav-cv"
+    href="/cv.pdf"
+  >
+    Ver CV
+    <Arrow />
+  </a>
+
+  <MobileMenu />
+</div>
         </nav>
       </header>
 
