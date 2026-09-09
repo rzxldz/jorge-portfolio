@@ -430,39 +430,53 @@ export default function Home() {
         </div>
 
         <div className="about-grid">
-          <div>
-            <p className="about-lead">
-              Tecnología, creatividad y ganas de
-              construir cosas que realmente funcionen.
-            </p>
-          </div>
+  <div className="about-left">
+    <p className="about-lead">
+      Tecnología, creatividad y ganas de
+      construir cosas que realmente funcionen.
+    </p>
 
-          <div className="about-copy">
-            <p>
-              Soy estudiante de séptimo semestre de
-              Ingeniería en Tecnologías de Cómputo y
-              Telecomunicaciones en la Universidad
-              Iberoamericana Ciudad de México.
-            </p>
+    <div className="profile-photo-wrapper">
+      <div className="profile-photo-ring">
+        <img
+          src="/profile/jorge.jpeg"
+          alt="Jorge Emmanuel Roldán Márquez"
+          className="profile-photo"
+        />
+      </div>
 
-            <p>
-              Me interesa especialmente el desarrollo de
-              software, el desarrollo web y móvil, y la
-              creación de proyectos donde la tecnología
-              pueda convertirse en una experiencia útil
-              para otras personas.
-            </p>
+      <div className="profile-photo-info">
+        <strong>Jorge Roldán</strong>
+        <span>Ciudad de México</span>
+      </div>
+    </div>
+  </div>
 
-            <p>
-              Actualmente busco mi primera oportunidad
-              profesional como becario para aplicar mis
-              conocimientos, aprender de un equipo y
-              continuar desarrollándome en el área
-              tecnológica.
-            </p>
-          </div>
-        </div>
+  <div className="about-copy">
+    <p>
+      Soy estudiante de séptimo semestre de
+      Ingeniería en Tecnologías de Cómputo y
+      Telecomunicaciones en la Universidad
+      Iberoamericana Ciudad de México.
+    </p>
 
+    <p>
+      Me interesa especialmente el desarrollo de
+      software, el desarrollo web y móvil, y la
+      creación de proyectos donde la tecnología
+      pueda convertirse en una experiencia útil
+      para otras personas.
+    </p>
+
+    <p>
+      Actualmente busco mi primera oportunidad
+      profesional como becario para aplicar mis
+      conocimientos, aprender de un equipo y
+      continuar desarrollándome en el área
+      tecnológica.
+    </p>
+  </div>
+</div>
         <div className="status-grid">
           <article>
             <span>

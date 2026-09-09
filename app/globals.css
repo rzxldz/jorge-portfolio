@@ -1568,6 +1568,86 @@ a:hover .arrow {
     620;
 }
 
+/* ============================= */
+/* PROFILE PHOTO */
+/* ============================= */
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-photo-wrapper {
+  margin-top: 50px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+}
+
+.profile-photo-ring {
+  width: 250px;
+  height: 250px;
+
+  padding: 7px;
+
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+
+  position: relative;
+}
+
+.profile-photo-ring::after {
+  content: "";
+
+  position: absolute;
+
+  inset: -12px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    color-mix(
+      in srgb,
+      var(--accent) 18%,
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 50%;
+}
+
+.profile-photo-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.profile-photo-info strong {
+  font-size: 0.9rem;
+}
+
+.profile-photo-info span {
+  color: var(--text-soft);
+
+  font-size: 0.72rem;
+}
+
 .about-copy {
   color:
     var(--text-soft);
@@ -4075,6 +4155,24 @@ a:hover .arrow {
 }
 
 @media (max-width: 650px) {
+
+  .profile-photo-wrapper {
+  margin-top: 35px;
+
+  width: 100%;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 18px;
+}
+
+.profile-photo-ring {
+  width: 180px;
+  height: 180px;
+}
+
   .container {
     width:
       calc(100% - 28px);
