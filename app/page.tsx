@@ -319,10 +319,14 @@ export default function Home() {
                   <Arrow />
                 </a>
 
-                <a href="#">
-                  LinkedIn
-                  <Arrow />
-                </a>
+                <a
+  href="https://www.linkedin.com/in/jorge-emmanuel-roldán-márquez-499a13434"
+  target="_blank"
+  rel="noreferrer"
+>
+  LinkedIn
+  <Arrow />
+</a>
               </div>
             </div>
           </div>
