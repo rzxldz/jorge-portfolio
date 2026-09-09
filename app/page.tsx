@@ -1,95 +1,210 @@
 import ThemeToggle from "@/components/ThemeToggle";
 import MobileMenu from "@/components/MobileMenu";
 import ProjectCarousel from "@/components/ProjectCarousel";
+import ProjectCaseStudy, {
+  type CaseStudyData,
+} from "@/components/ProjectCaseStudy";
 
-const skills = {
-  Lenguajes: [
-    "C",
-    "Java",
-    "Python",
-    "JavaScript",
-    "HTML",
-    "CSS",
-    "MATLAB",
-  ],
-
-  Desarrollo: [
-    "Desarrollo web",
-    "Desarrollo móvil",
-    "Diseño responsive",
-    "Programación orientada a objetos",
-    "Estructuras de datos",
-  ],
-
-  "Datos y servicios": [
-    "MySQL",
-    "Firebase",
-    "Google Maps API",
-  ],
-
-  Herramientas: [
-    "Git",
-    "GitHub",
-    "VS Code",
-    "Visual Studio",
-    "Android Studio",
-    "Google Colab",
-    "Linux",
-  ],
-
-  Hardware: [
-    "Arduino",
-    "Raspberry Pi",
-  ],
-
-  Diseño: [
-    "Canva",
-    "Photoshop",
-    "After Effects",
-  ],
+type Project = {
+  number: string;
+  subtitle: string;
+  title: string;
+  description: string;
+  work: string;
+  tech: string[];
+  live: string;
+  github: string;
+  caseStudy?: CaseStudyData;
 };
 
-const projects = [
+const projects: Project[] = [
   {
     number: "01",
+
+    subtitle: "Sitio web empresarial",
+
     title: "Dial Transport",
-    subtitle: "Web Development · 2026",
+
     description:
-      "Sitio web desarrollado para una empresa de renta y transporte de vehículos, diseñado para presentar servicios, flotilla y facilitar el contacto con clientes.",
+      "Sitio web desarrollado para una empresa de renta y transporte de vehículos, enfocado en presentar de manera clara sus servicios, flotilla y opciones de contacto.",
+
     work:
-      "Diseño y desarrollo de la interfaz, estructura responsive, organización del contenido, presentación de flotilla, formularios de cotización e integración de diferentes canales de contacto.",
-    tech: ["HTML", "CSS", "JavaScript", "Netlify"],
-    live: "https://endearing-dialtransport-e7537d.netlify.app/",
-    github: "https://github.com/rzxldz/Dial-Transport",
-    featured: true,
+      "Diseño y desarrollo de la interfaz, organización del contenido, estructura responsive y presentación visual de los servicios y la flotilla.",
+
+    tech: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Responsive",
+      "Netlify",
+    ],
+
+    live:
+      "https://endearing-dialtransport-e7537d.netlify.app/",
+
+    github:
+      "https://github.com/rzxldz/Dial-Transport",
+
+    caseStudy: {
+      objective:
+        "Convertir la información de una empresa de transporte en una experiencia web clara, profesional y fácil de recorrer.",
+
+      work:
+        "Trabajé en la estructura del sitio, la interfaz, la adaptación responsive y la presentación visual de los servicios y la flotilla.",
+
+      challenge:
+        "Presentar suficiente información comercial sin saturar la interfaz ni dificultar la navegación.",
+
+      solution:
+        "Organicé el contenido mediante una jerarquía visual clara, secciones diferenciadas y una experiencia adaptable a diferentes tamaños de pantalla.",
+
+      result:
+        "Un sitio web funcional y publicado que permite presentar digitalmente la empresa, sus servicios y su propuesta de valor.",
+    },
   },
 
   {
     number: "02",
+
+    subtitle: "Experiencia digital",
+
     title: "Experiencia Web Interactiva",
-    subtitle: "Interactive Web Experience · 2026",
+
     description:
-      "Experiencia digital construida alrededor de música, animaciones, audio y narrativa mediante una navegación progresiva.",
+      "Experiencia digital que combina música, contenido, animaciones e interacción mediante una navegación progresiva.",
+
     work:
-      "Diseño de la experiencia, interacción entre secciones, reproducción de audio, animaciones y desarrollo de una navegación orientada a generar una experiencia más personal.",
-    tech: ["HTML", "CSS", "JavaScript", "HTML5 Audio"],
-    live: "https://para-rebbeca.vercel.app/",
-    github: "https://github.com/rzxldz/para-rebbeca",
-    featured: false,
+      "Diseño de la experiencia, desarrollo de la interfaz, navegación entre secciones, reproducción de audio y comportamiento responsive.",
+
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "CSS",
+      "Audio",
+      "Vercel",
+    ],
+
+    live:
+      "https://para-rebbeca.vercel.app/",
+
+    github:
+      "https://github.com/rzxldz/para-rebbeca",
+
+    caseStudy: {
+      objective:
+        "Crear una experiencia web personalizada donde contenido, música, interacción y diseño formaran parte de una misma narrativa.",
+
+      work:
+        "Desarrollé la interfaz, navegación entre secciones, reproducción de audio, interacciones y comportamiento responsive.",
+
+      challenge:
+        "Mantener sincronizadas distintas interacciones y contenido multimedia sin perder una experiencia fluida, especialmente en dispositivos móviles.",
+
+      solution:
+        "Separé la experiencia en componentes y estados, controlando la navegación y el comportamiento del audio según la sección en la que se encuentra el usuario.",
+
+      result:
+        "Una experiencia web interactiva completa, publicada en Vercel y diseñada para funcionar tanto en escritorio como en móvil.",
+    },
   },
 
   {
     number: "03",
+
+    subtitle: "Identidad profesional",
+
     title: "Portfolio Personal",
-    subtitle: "Web Design & Development · 2026",
+
     description:
-      "Portfolio creado para presentar proyectos, formación y habilidades mediante una experiencia visual moderna, clara y responsive.",
+      "Portfolio creado para presentar mis proyectos, habilidades, formación y perfil profesional mediante una experiencia clara y responsive.",
+
     work:
-      "Arquitectura de contenido, diseño de interfaz, responsive design, modo claro y oscuro y construcción de una experiencia enfocada en reclutamiento.",
-    tech: ["Next.js", "TypeScript", "CSS", "Vercel"],
-    live: "https://jorge-portfolio-mu.vercel.app/",
-    github: "https://github.com/rzxldz/jorge-portfolio",
-    featured: false,
+      "Arquitectura de contenido, diseño de interfaz, modo claro y oscuro, experiencia responsive, animaciones y despliegue.",
+
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "CSS",
+      "Git",
+      "Vercel",
+    ],
+
+    live:
+      "https://jorge-portfolio-mu.vercel.app/",
+
+    github:
+      "https://github.com/rzxldz/jorge-portfolio",
+  },
+];
+
+const skills = [
+  {
+    number: "01",
+    title: "Lenguajes",
+    items: [
+      "C",
+      "Java",
+      "Python",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "MATLAB",
+    ],
+  },
+
+  {
+    number: "02",
+    title: "Desarrollo",
+    items: [
+      "Desarrollo web",
+      "Desarrollo móvil",
+      "Responsive",
+      "POO",
+      "Estructuras de datos",
+    ],
+  },
+
+  {
+    number: "03",
+    title: "Datos y servicios",
+    items: [
+      "MySQL",
+      "Firebase",
+      "Google Maps API",
+    ],
+  },
+
+  {
+    number: "04",
+    title: "Herramientas",
+    items: [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Visual Studio",
+      "Android Studio",
+      "Google Colab",
+      "Linux",
+    ],
+  },
+
+  {
+    number: "05",
+    title: "Hardware",
+    items: [
+      "Arduino",
+      "Raspberry Pi",
+    ],
+  },
+
+  {
+    number: "06",
+    title: "Diseño",
+    items: [
+      "Canva",
+      "Photoshop",
+      "After Effects",
+    ],
   },
 ];
 
@@ -106,36 +221,36 @@ function ProjectPreview({
 }: {
   number: string;
 }) {
- if (number === "01") {
-  return (
-    <div className="project-preview">
-      <ProjectCarousel
-        alt="Dial Transport"
-        images={[
-          "/projects/dial/dial-transport-1.png",
-          "/projects/dial/dial-transport-2.png",
-          "/projects/dial/dial-transport-3.png",
-        ]}
-      />
-    </div>
-  );
-}
+  if (number === "01") {
+    return (
+      <div className="project-preview">
+        <ProjectCarousel
+          alt="Dial Transport"
+          images={[
+            "/projects/dial/dial-transport-1.png",
+            "/projects/dial/dial-transport-2.png",
+            "/projects/dial/dial-transport-3.png",
+          ]}
+        />
+      </div>
+    );
+  }
 
   if (number === "02") {
-  return (
-    <div className="project-preview">
-      <ProjectCarousel
-        alt="Experiencia Web Interactiva"
-        images={[
-          "/projects/rebbeca/rebbeca-1.png",
-          "/projects/rebbeca/rebbeca-2.png",
-          "/projects/rebbeca/rebbeca-3.png",
-          "/projects/rebbeca/rebbeca-4.png",
-        ]}
-      />
-    </div>
-  );
-}
+    return (
+      <div className="project-preview">
+        <ProjectCarousel
+          alt="Experiencia Web Interactiva"
+          images={[
+            "/projects/rebbeca/rebbeca-1.png",
+            "/projects/rebbeca/rebbeca-2.png",
+            "/projects/rebbeca/rebbeca-3.png",
+            "/projects/rebbeca/rebbeca-4.png",
+          ]}
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="project-preview preview-portfolio">
@@ -150,13 +265,13 @@ function ProjectPreview({
 
         <div className="portfolio-screen">
           <span className="screen-label">
-            PORTFOLIO / 2026
+            PORTFOLIO · 2026
           </span>
 
           <h4>
             Jorge
             <br />
-            Roldán.
+            Roldán
           </h4>
 
           <div className="screen-lines">
@@ -166,7 +281,7 @@ function ProjectPreview({
           </div>
 
           <div className="screen-pill">
-            Software · Web · Mobile
+            SOFTWARE · WEB · MOBILE
           </div>
         </div>
       </div>
@@ -177,16 +292,17 @@ function ProjectPreview({
 export default function Home() {
   return (
     <main>
+
+      {/* ============================= */}
+      {/* NAVBAR */}
+      {/* ============================= */}
+
       <header className="nav-shell">
         <nav
           className="navbar container"
           aria-label="Navegación principal"
         >
-          <a
-            className="brand"
-            href="#inicio"
-            aria-label="Ir al inicio"
-          >
+          <a href="#inicio" className="brand">
             JR<span>.</span>
           </a>
 
@@ -213,36 +329,42 @@ export default function Home() {
           </div>
 
           <div className="nav-actions">
-  <ThemeToggle />
+            <ThemeToggle />
 
-  <a
-    className="nav-cv"
-    href="/cv.pdf"
-  >
-    Ver CV
-    <Arrow />
-  </a>
+            <a
+              href="/cv.pdf"
+              className="nav-cv"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Ver CV
+              <Arrow />
+            </a>
 
-  <MobileMenu />
-</div>
+            <MobileMenu />
+          </div>
         </nav>
       </header>
+
+
+      {/* ============================= */}
+      {/* HERO */}
+      {/* ============================= */}
 
       <section
         id="inicio"
         className="hero"
       >
-        <div className="hero-noise" />
-
         <div className="hero-glow hero-glow-one" />
         <div className="hero-glow hero-glow-two" />
 
         <div className="container hero-grid">
+
           <div className="hero-copy">
             <div className="availability">
               <span className="availability-dot" />
 
-              Disponible para oportunidades
+              Disponible para oportunidades profesionales
             </div>
 
             <p className="eyebrow">
@@ -252,49 +374,57 @@ export default function Home() {
             <h1>
               Jorge Emmanuel
               <br />
-              <span>Roldán Márquez</span>
+
+              <span>
+                Roldán Márquez
+              </span>
             </h1>
 
             <div className="hero-specialties">
               <span>SOFTWARE</span>
+
               <i />
+
               <span>WEB</span>
+
               <i />
+
               <span>MOBILE</span>
             </div>
 
             <p className="hero-role">
-              Estudiante de Ingeniería en
-              Tecnologías de Cómputo y
-              Telecomunicaciones.
+              Estudiante de Ingeniería en Tecnologías
+              de Cómputo y Telecomunicaciones.
             </p>
 
             <p className="hero-description">
-              Desarrollo aplicaciones y experiencias
-              digitales combinando programación,
-              diseño y tecnología para convertir ideas
-              en proyectos funcionales.
+              Desarrollo proyectos de software,
+              aplicaciones y experiencias web mientras
+              continúo fortaleciendo mis habilidades en
+              tecnología.
             </p>
 
             <div className="hero-actions">
               <a
-                className="button button-primary"
                 href="#proyectos"
+                className="button button-primary"
               >
-                Explorar proyectos
+                Ver proyectos
                 <Arrow />
               </a>
 
               <a
-                className="button button-secondary"
                 href="#contacto"
+                className="button button-secondary"
               >
                 Contactarme
               </a>
             </div>
 
             <div className="hero-social">
-              <span>ENCUÉNTRAME EN</span>
+              <span>
+                ENCUÉNTRAME EN
+              </span>
 
               <div>
                 <a
@@ -307,16 +437,19 @@ export default function Home() {
                 </a>
 
                 <a
-  href="https://www.linkedin.com/in/jorge-emmanuel-roldán-márquez-499a13434"
-  target="_blank"
-  rel="noreferrer"
->
-  LinkedIn
-  <Arrow />
-</a>
+                  href="https://www.linkedin.com/in/jorge-emmanuel-roldán-márquez-499a13434"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  LinkedIn
+                  <Arrow />
+                </a>
               </div>
             </div>
           </div>
+
+
+          {/* SYSTEM / BUILD */}
 
           <div
             className="hero-visual"
@@ -324,15 +457,12 @@ export default function Home() {
           >
             <div className="visual-grid" />
 
-            <div className="orbit orbit-outer">
-              <div className="orbit-dot dot-one" />
-            </div>
-
-            <div className="orbit orbit-middle">
-              <div className="orbit-dot dot-two" />
-            </div>
-
+            <div className="orbit orbit-outer" />
+            <div className="orbit orbit-middle" />
             <div className="orbit orbit-inner" />
+
+            <span className="orbit-dot dot-one" />
+            <span className="orbit-dot dot-two" />
 
             <div className="visual-core">
               <span className="core-small">
@@ -345,18 +475,28 @@ export default function Home() {
 
               <span className="core-status">
                 <i />
-                online
+                ONLINE
               </span>
             </div>
 
             <div className="float-panel code-panel">
-              <span className="panel-number">
-                01
+              <span>
+                BUILD LOG
               </span>
 
               <code>
-                const idea = build();
+                {"const idea = build();"}
               </code>
+            </div>
+
+            <div className="float-panel status-panel">
+              <span>
+                STATUS
+              </span>
+
+              <strong>
+                AVAILABLE
+              </strong>
             </div>
 
             <div className="float-panel stack-panel">
@@ -369,166 +509,181 @@ export default function Home() {
               </strong>
             </div>
 
-            <div className="float-panel status-panel">
-              <span>
-                STATUS
-              </span>
+            <span className="visual-coordinate coordinate-one">
+              BUILD · 2026
+            </span>
 
-              <strong>
-                LEARNING
-              </strong>
-            </div>
-
-            <div className="visual-coordinate coordinate-one">
-              19.4326° N
-            </div>
-
-            <div className="visual-coordinate coordinate-two">
-              99.1332° W
-            </div>
+            <span className="visual-coordinate coordinate-two">
+              JR · SYSTEM
+            </span>
           </div>
         </div>
 
-        <a
-          className="scroll-indicator"
-          href="#sobre-mi"
-        >
-          <span>SCROLL TO EXPLORE</span>
+        <div className="scroll-indicator">
+          <span>
+            SCROLL
+          </span>
 
-          <i>↓</i>
-        </a>
+          <i>
+            ↓
+          </i>
+        </div>
       </section>
+
+
+      {/* ============================= */}
+      {/* SOBRE MÍ */}
+      {/* ============================= */}
 
       <section
         id="sobre-mi"
-        className="section container"
+        className="section"
       >
-        <div className="section-heading">
-          <span>01</span>
+        <div className="container">
 
-          <h2>
-            Sobre mí
-          </h2>
-
-          <div className="section-line" />
-        </div>
-
-        <div className="about-grid">
-  <div className="about-left">
-    <p className="about-lead">
-      Tecnología, creatividad y ganas de
-      construir cosas que realmente funcionen.
-    </p>
-
-    <div className="profile-photo-wrapper">
-      <div className="profile-photo-ring">
-  <div className="profile-photo-clip">
-    <img
-      src="/profile/jorge.jpeg"
-      alt="Jorge Emmanuel Roldán Márquez"
-      className="profile-photo"
-    />
-  </div>
-</div>
-
-      <div className="profile-photo-info">
-        <strong>Jorge Roldán</strong>
-        <span>Ciudad de México</span>
-      </div>
-    </div>
-  </div>
-
-  <div className="about-copy">
-    <p>
-      Soy estudiante de séptimo semestre de
-      Ingeniería en Tecnologías de Cómputo y
-      Telecomunicaciones en la Universidad
-      Iberoamericana Ciudad de México.
-    </p>
-
-    <p>
-      Me interesa especialmente el desarrollo de
-      software, el desarrollo web y móvil, y la
-      creación de proyectos donde la tecnología
-      pueda convertirse en una experiencia útil
-      para otras personas.
-    </p>
-
-    <p>
-      Actualmente busco mi primera oportunidad
-      profesional como becario para aplicar mis
-      conocimientos, aprender de un equipo y
-      continuar desarrollándome en el área
-      tecnológica.
-    </p>
-  </div>
-</div>
-        <div className="status-grid">
-          <article>
+          <div className="section-heading">
             <span>
-              SEMESTRE
+              01
             </span>
 
-            <strong>
-              7º
-            </strong>
+            <h2>
+              Sobre mí
+            </h2>
 
-            <small>
-              Actualmente
-            </small>
-          </article>
+            <div className="section-line" />
+          </div>
 
-          <article>
-            <span>
-              UNIVERSIDAD
-            </span>
+          <div className="about-grid">
 
-            <strong>
-              IBERO
-            </strong>
+            <div className="about-left">
+              <p className="about-lead">
+                Tecnología, creatividad y ganas de
+                construir cosas que realmente funcionen.
+              </p>
 
-            <small>
-              Ciudad de México
-            </small>
-          </article>
+              <div className="profile-photo-wrapper">
 
-          <article>
-            <span>
-              ENFOQUE
-            </span>
+                <div className="profile-photo-ring">
+                  <div className="profile-photo-clip">
+                    <img
+                      src="/profile/jorge.jpeg"
+                      alt="Jorge Emmanuel Roldán Márquez"
+                      className="profile-photo"
+                    />
+                  </div>
+                </div>
 
-            <strong>
-              Software
-            </strong>
+                <div className="profile-photo-info">
+                  <strong>
+                    Jorge Roldán
+                  </strong>
 
-            <small>
-              Web & Mobile
-            </small>
-          </article>
+                  <span>
+                    Ciudad de México
+                  </span>
+                </div>
+              </div>
+            </div>
 
-          <article>
-            <span>
-              OBJETIVO
-            </span>
+            <div className="about-copy">
+              <p>
+                Soy estudiante de séptimo semestre de
+                Ingeniería en Tecnologías de Cómputo y
+                Telecomunicaciones en la Universidad
+                Iberoamericana Ciudad de México.
+              </p>
 
-            <strong>
-              Becario
-            </strong>
+              <p>
+                Me interesa el desarrollo de software,
+                desarrollo web y móvil, así como la
+                creación de proyectos que mezclen
+                tecnología, funcionalidad y diseño.
+              </p>
 
-            <small>
-              Primera experiencia
-            </small>
-          </article>
+              <p>
+                Busco seguir construyendo experiencia
+                profesional mientras continúo
+                desarrollando proyectos y fortaleciendo
+                mis habilidades técnicas.
+              </p>
+            </div>
+          </div>
+
+          <div className="status-grid">
+            <article>
+              <span>
+                SEMESTRE
+              </span>
+
+              <strong>
+                7º
+              </strong>
+
+              <small>
+                Ingeniería
+              </small>
+            </article>
+
+            <article>
+              <span>
+                UNIVERSIDAD
+              </span>
+
+              <strong>
+                IBERO
+              </strong>
+
+              <small>
+                Ciudad de México
+              </small>
+            </article>
+
+            <article>
+              <span>
+                ENFOQUE
+              </span>
+
+              <strong>
+                Software
+              </strong>
+
+              <small>
+                Web · Mobile
+              </small>
+            </article>
+
+            <article>
+              <span>
+                ESTADO
+              </span>
+
+              <strong>
+                Disponible
+              </strong>
+
+              <small>
+                Oportunidades profesionales
+              </small>
+            </article>
+          </div>
         </div>
       </section>
+
+
+      {/* ============================= */}
+      {/* PROYECTOS */}
+      {/* ============================= */}
 
       <section
         id="proyectos"
         className="projects-section"
       >
         <div className="container">
+
           <div className="section-heading">
-            <span>02</span>
+            <span>
+              02
+            </span>
 
             <h2>
               Proyectos
@@ -540,8 +695,9 @@ export default function Home() {
           <div className="projects-header">
             <p>
               Una selección de proyectos donde he
-              trabajado desarrollo, interacción,
-              diseño e implementación.
+              trabajado en desarrollo, interfaz,
+              interacción y publicación de experiencias
+              digitales.
             </p>
 
             <span>
@@ -555,17 +711,20 @@ export default function Home() {
                 className="project"
                 key={project.number}
               >
-                <div className="project-preview-wrapper">
-                  <ProjectPreview
-                    number={project.number}
-                  />
 
+                <div className="project-preview-wrapper">
                   <span className="project-index">
                     {project.number}
                   </span>
+
+                  <ProjectPreview
+                    number={project.number}
+                  />
                 </div>
 
+
                 <div className="project-content">
+
                   <p className="project-subtitle">
                     {project.subtitle}
                   </p>
@@ -589,36 +748,63 @@ export default function Home() {
                   </div>
 
                   <div className="project-tags">
-                    {project.tech.map((technology) => (
-                      <span key={technology}>
-                        {technology}
+                    {project.tech.map((item) => (
+                      <span key={item}>
+                        {item}
                       </span>
                     ))}
                   </div>
 
                   <div className="project-links">
-  <a
-    href={project.live}
-    target={project.live !== "#" ? "_blank" : undefined}
-    rel={project.live !== "#" ? "noreferrer" : undefined}
-  >
-    Ver proyecto
-    <Arrow />
-  </a>
+                    <a
+                      href={project.live}
+                      target={
+                        project.live !== "#"
+                          ? "_blank"
+                          : undefined
+                      }
+                      rel={
+                        project.live !== "#"
+                          ? "noreferrer"
+                          : undefined
+                      }
+                    >
+                      Ver proyecto
+                      <Arrow />
+                    </a>
 
-  <a
-    href={project.github}
-    target={project.github !== "#" ? "_blank" : undefined}
-    rel={project.github !== "#" ? "noreferrer" : undefined}
-  >
-    GitHub
-    <Arrow />
-  </a>
-</div>
+                    <a
+                      href={project.github}
+                      target={
+                        project.github !== "#"
+                          ? "_blank"
+                          : undefined
+                      }
+                      rel={
+                        project.github !== "#"
+                          ? "noreferrer"
+                          : undefined
+                      }
+                    >
+                      GitHub
+                      <Arrow />
+                    </a>
+                  </div>
+
+
+                  {/* CASE STUDY SOLO SI EXISTE */}
+
+                  {project.caseStudy && (
+                    <ProjectCaseStudy
+                      data={project.caseStudy}
+                    />
+                  )}
+
                 </div>
               </article>
             ))}
           </div>
+
 
           <div className="future-project">
             <span>
@@ -627,176 +813,213 @@ export default function Home() {
 
             <div>
               <strong>
-                Aplicación móvil de seguimiento de ejercicio
+                Aplicación móvil de seguimiento físico
               </strong>
 
               <p>
-                Se añadirá cuando exista nuevamente una
-                versión funcional que pueda mostrarse.
+                Se añadirá al portfolio cuando exista
+                nuevamente una versión funcional que
+                pueda mostrarse correctamente.
               </p>
             </div>
           </div>
+
         </div>
       </section>
 
+
+      {/* ============================= */}
+      {/* HABILIDADES */}
+      {/* ============================= */}
+
       <section
         id="habilidades"
-        className="section container"
+        className="section"
       >
-        <div className="section-heading">
-          <span>03</span>
+        <div className="container">
 
-          <h2>
-            Habilidades
-          </h2>
+          <div className="section-heading">
+            <span>
+              03
+            </span>
 
-          <div className="section-line" />
-        </div>
+            <h2>
+              Habilidades
+            </h2>
 
-        <div className="skills-intro">
-          <p>
-            Tecnologías y herramientas con las que he
-            trabajado durante mi formación académica y
-            en proyectos personales.
-          </p>
+            <div className="section-line" />
+          </div>
 
-          <span>
-            SIN PORCENTAJES ARBITRARIOS.
-            <br />
-            SOLO EXPERIENCIA REAL.
-          </span>
-        </div>
+          <div className="skills-intro">
+            <p>
+              Tecnologías y herramientas con las que he
+              trabajado durante mi formación y en
+              proyectos personales.
+            </p>
 
-        <div className="skills-grid">
-          {Object.entries(skills).map(
-            ([category, items], index) => (
+            <span>
+              SIN PORCENTAJES
+              <br />
+              SOLO EXPERIENCIA REAL
+            </span>
+          </div>
+
+          <div className="skills-grid">
+            {skills.map((skill) => (
               <article
                 className="skill-card"
-                key={category}
+                key={skill.number}
               >
                 <div className="skill-top">
-                  <span>
-                    0{index + 1}
-                  </span>
-
                   <h3>
-                    {category}
+                    {skill.title}
                   </h3>
+
+                  <span>
+                    {skill.number}
+                  </span>
                 </div>
 
                 <div className="skill-items">
-                  {items.map((item) => (
+                  {skill.items.map((item) => (
                     <span key={item}>
                       {item}
                     </span>
                   ))}
                 </div>
               </article>
-            ),
-          )}
+            ))}
+          </div>
+
         </div>
       </section>
+
+
+      {/* ============================= */}
+      {/* TRAYECTORIA */}
+      {/* ============================= */}
 
       <section
         id="trayectoria"
-        className="section container"
+        className="section"
       >
-        <div className="section-heading">
-          <span>04</span>
+        <div className="container">
 
-          <h2>
-            Trayectoria
-          </h2>
+          <div className="section-heading">
+            <span>
+              04
+            </span>
 
-          <div className="section-line" />
-        </div>
+            <h2>
+              Trayectoria
+            </h2>
 
-        <div className="timeline">
-          <article className="timeline-item">
-            <div className="timeline-date">
-              2023 — 2028
-            </div>
+            <div className="section-line" />
+          </div>
 
-            <div className="timeline-marker">
-              <span />
-            </div>
+          <div className="timeline">
 
-            <div className="timeline-content">
-              <span>
-                EDUCACIÓN
-              </span>
+            <article className="timeline-item">
+              <div className="timeline-date">
+                2023 — ACTUALIDAD
+              </div>
 
-              <h3>
-                Ingeniería en Tecnologías de Cómputo y
-                Telecomunicaciones
-              </h3>
+              <div className="timeline-marker">
+                <span />
+              </div>
 
-              <h4>
-                Universidad Iberoamericana Ciudad de México
-              </h4>
+              <div className="timeline-content">
+                <span>
+                  EDUCACIÓN
+                </span>
 
-              <p>
-                Formación en programación, desarrollo de
-                software, bases de datos, tecnologías web,
-                desarrollo móvil y sistemas
-                computacionales.
-              </p>
-            </div>
-          </article>
+                <h3>
+                  Ingeniería en Tecnologías de Cómputo
+                  y Telecomunicaciones
+                </h3>
 
-          <article className="timeline-item">
-            <div className="timeline-date">
-              2026 — ACTUALIDAD
-            </div>
+                <h4>
+                  Universidad Iberoamericana Ciudad de México
+                </h4>
 
-            <div className="timeline-marker">
-              <span />
-            </div>
+                <p>
+                  Formación en programación,
+                  desarrollo de software,
+                  estructuras de datos,
+                  tecnologías web,
+                  sistemas computacionales
+                  y telecomunicaciones.
+                </p>
+              </div>
+            </article>
 
-            <div className="timeline-content">
-              <span>
-                PROYECTOS PERSONALES
-              </span>
 
-              <h3>
-                Desarrollo y experimentación
-              </h3>
+            <article className="timeline-item">
+              <div className="timeline-date">
+                ACTUALIDAD
+              </div>
 
-              <h4>
-                Aprendizaje fuera del salón de clases
-              </h4>
+              <div className="timeline-marker">
+                <span />
+              </div>
 
-              <p>
-                Desarrollo de proyectos web y aplicaciones
-                para fortalecer conocimientos de
-                programación, diseño e implementación de
-                soluciones digitales.
-              </p>
-            </div>
-          </article>
+              <div className="timeline-content">
+                <span>
+                  PROYECTOS
+                </span>
+
+                <h3>
+                  Desarrollo y experimentación
+                </h3>
+
+                <h4>
+                  Proyectos personales
+                </h4>
+
+                <p>
+                  Desarrollo de sitios,
+                  aplicaciones y experiencias digitales
+                  para fortalecer conocimientos técnicos
+                  y llevar ideas a productos funcionales.
+                </p>
+              </div>
+            </article>
+
+          </div>
         </div>
       </section>
 
+
+      {/* ============================= */}
+      {/* ACTUALMENTE */}
+      {/* ============================= */}
+
       <section className="current-section">
         <div className="container">
+
           <div className="current-top">
+
             <p className="eyebrow">
-              05 · ACTUALMENTE
+              ACTUALMENTE
             </p>
 
             <h2>
-              Preparado para
+              El siguiente
               <br />
-              el siguiente paso.
+              paso.
             </h2>
 
             <p className="current-description">
-              Busco mi primera oportunidad profesional en
-              tecnología o desarrollo de software.
+              Busco continuar creciendo profesionalmente,
+              aplicar lo que he aprendido y seguir
+              construyendo experiencia dentro del área
+              tecnológica.
             </p>
           </div>
 
+
           <div className="goals-grid">
+
             <article>
               <span>
                 01
@@ -809,8 +1032,8 @@ export default function Home() {
 
                 <p>
                   Seguir fortaleciendo mis conocimientos
-                  técnicos trabajando sobre problemas
-                  reales.
+                  técnicos mediante proyectos y
+                  experiencia profesional.
                 </p>
               </div>
             </article>
@@ -822,13 +1045,13 @@ export default function Home() {
 
               <div>
                 <strong>
-                  Crear
+                  Construir
                 </strong>
 
                 <p>
-                  Convertir ideas en proyectos funcionales
-                  y experiencias digitales bien
-                  construidas.
+                  Convertir ideas en productos,
+                  aplicaciones y experiencias digitales
+                  funcionales.
                 </p>
               </div>
             </article>
@@ -844,89 +1067,110 @@ export default function Home() {
                 </strong>
 
                 <p>
-                  Obtener experiencia profesional y
-                  aprender trabajando junto a otros
-                  desarrolladores.
+                  Aprender trabajando junto a otros
+                  desarrolladores y profesionales del
+                  área.
                 </p>
               </div>
             </article>
+
           </div>
         </div>
       </section>
 
-      <section className="section container">
-        <div className="section-heading">
-          <span>06</span>
 
-          <h2>
-            Más allá del código
-          </h2>
+      {/* ============================= */}
+      {/* MÁS ALLÁ DEL CÓDIGO */}
+      {/* ============================= */}
 
-          <div className="section-line" />
-        </div>
+      <section className="section">
+        <div className="container">
 
-        <div className="interests-grid">
-          <article>
-            <div className="interest-icon">
-              ♫
-            </div>
-
+          <div className="section-heading">
             <span>
-              01
+              05
             </span>
 
-            <h3>
-              Música
-            </h3>
+            <h2>
+              Más allá del código
+            </h2>
 
-            <p>
-              Forma parte importante de mi día a día y
-              también ha influido en algunos de mis
-              proyectos personales.
-            </p>
-          </article>
+            <div className="section-line" />
+          </div>
 
-          <article>
-            <div className="interest-icon">
-              ◉
-            </div>
 
-            <span>
-              02
-            </span>
+          <div className="interests-grid">
 
-            <h3>
-              Fotografía
-            </h3>
+            <article>
+              <div className="interest-icon">
+                ♫
+              </div>
 
-            <p>
-              Me interesa la fotografía y la creación de
-              contenido visual como otra manera de
-              explorar ideas.
-            </p>
-          </article>
+              <span>
+                01 · AUDIO
+              </span>
 
-          <article>
-            <div className="interest-icon">
-              ✦
-            </div>
+              <h3>
+                Música
+              </h3>
 
-            <span>
-              03
-            </span>
+              <p>
+                Forma parte de mi día a día y también
+                ha influido en algunas de las
+                experiencias digitales que desarrollo.
+              </p>
+            </article>
 
-            <h3>
-              Viajes
-            </h3>
 
-            <p>
-              Me gusta conocer nuevos lugares, culturas y
-              perspectivas diferentes fuera de mi
-              entorno cotidiano.
-            </p>
-          </article>
+            <article>
+              <div className="interest-icon">
+                ◉
+              </div>
+
+              <span>
+                02 · VISUAL
+              </span>
+
+              <h3>
+                Fotografía
+              </h3>
+
+              <p>
+                Me interesa la fotografía y la creación
+                de contenido visual como otra forma de
+                comunicar ideas.
+              </p>
+            </article>
+
+
+            <article>
+              <div className="interest-icon">
+                ✦
+              </div>
+
+              <span>
+                03 · EXPERIENCIAS
+              </span>
+
+              <h3>
+                Viajes
+              </h3>
+
+              <p>
+                Conocer nuevos lugares y perspectivas
+                también influye en mi manera de observar,
+                diseñar y crear.
+              </p>
+            </article>
+
+          </div>
         </div>
       </section>
+
+
+      {/* ============================= */}
+      {/* CONTACTO */}
+      {/* ============================= */}
 
       <section
         id="contacto"
@@ -936,9 +1180,10 @@ export default function Home() {
         <div className="contact-orb contact-orb-two" />
 
         <div className="container contact-grid">
+
           <div>
             <p className="contact-label">
-              CONTACTO · 07
+              CONTACTO · 2026
             </p>
 
             <h2>
@@ -948,23 +1193,25 @@ export default function Home() {
             </h2>
           </div>
 
+
           <div className="contact-content">
             <p>
-              Estoy abierto a oportunidades de becaría,
-              prácticas profesionales y proyectos
+              Estoy abierto a oportunidades
+              profesionales, prácticas y proyectos
               relacionados con tecnología y desarrollo
               de software.
             </p>
 
             <a
-              className="email-link"
               href="mailto:joremmarold@gmail.com"
+              className="email-link"
             >
               joremmarold@gmail.com
               <Arrow />
             </a>
 
             <div className="contact-links">
+
               <a
                 href="https://github.com/rzxldz"
                 target="_blank"
@@ -975,43 +1222,59 @@ export default function Home() {
               </a>
 
               <a
-  href="https://www.linkedin.com/in/jorge-emmanuel-roldán-márquez-499a13434"
-  target="_blank"
-  rel="noreferrer"
->
-  LinkedIn
-  <Arrow />
-</a>
+                href="https://www.linkedin.com/in/jorge-emmanuel-roldán-márquez-499a13434"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+                <Arrow />
+              </a>
 
-              <a href="/cv.pdf">
+              <a
+                href="/cv.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Descargar CV
                 <Arrow />
               </a>
+
             </div>
           </div>
+
         </div>
       </section>
 
+
+      {/* ============================= */}
+      {/* FOOTER */}
+      {/* ============================= */}
+
       <footer className="footer container">
+
         <div className="footer-name">
           <strong>
             Jorge Emmanuel Roldán Márquez
           </strong>
 
           <span>
-            Portfolio · 2026
+            Software · Web · Mobile
           </span>
         </div>
 
         <div className="footer-center">
-          Diseñado y desarrollado con intención.
+          © 2026
         </div>
 
         <a href="#inicio">
           Volver arriba
-          <span>↑</span>
+          <span aria-hidden="true">
+            ↑
+          </span>
         </a>
+
       </footer>
+
     </main>
   );
 }
