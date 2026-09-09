@@ -1211,35 +1211,42 @@ export default function Home() {
             </a>
 
             <div className="contact-links">
+  <a
+    href="https://github.com/rzxldz"
+    target="_blank"
+    rel="noreferrer"
+  >
+    GitHub
+    <Arrow />
+  </a>
 
-              <a
-                href="https://github.com/rzxldz"
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub
-                <Arrow />
-              </a>
+  <a
+    href="https://www.linkedin.com/in/jorge-emmanuel-roldán-márquez-499a13434"
+    target="_blank"
+    rel="noreferrer"
+  >
+    LinkedIn
+    <Arrow />
+  </a>
 
-              <a
-                href="https://www.linkedin.com/in/jorge-emmanuel-roldán-márquez-499a13434"
-                target="_blank"
-                rel="noreferrer"
-              >
-                LinkedIn
-                <Arrow />
-              </a>
+  <a
+    href="https://wa.me/525577802616"
+    target="_blank"
+    rel="noreferrer"
+  >
+    WhatsApp
+    <Arrow />
+  </a>
 
-              <a
-                href="/cv.pdf"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Descargar CV
-                <Arrow />
-              </a>
-
-            </div>
+  <a
+    href="/cv.pdf"
+    target="_blank"
+    rel="noreferrer"
+  >
+    Descargar CV
+    <Arrow />
+  </a>
+</div>
           </div>
 
         </div>
