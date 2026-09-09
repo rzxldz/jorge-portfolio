@@ -85,8 +85,8 @@ const projects = [
     work:
       "Arquitectura de contenido, diseño de interfaz, responsive design, modo claro y oscuro y construcción de una experiencia enfocada en reclutamiento.",
     tech: ["Next.js", "TypeScript", "CSS", "Vercel"],
-    live: "#",
-    github: "#",
+    live: "https://jorge-portfolio-mu.vercel.app/",
+    github: "https://github.com/rzxldz/jorge-portfolio",
     featured: false,
   },
 ];
