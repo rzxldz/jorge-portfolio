@@ -3929,9 +3929,8 @@ a:hover .arrow {
   }
 
   .nav-cv {
-    display:
-      none;
-  }
+  display: inline-flex;
+}
 
   .hero {
     padding:
@@ -4160,6 +4159,65 @@ a:hover .arrow {
     justify-self:
       start;
   }
+
+  /* ============================= */
+/* MOBILE FINAL POLISH */
+/* ============================= */
+
+/* Mostrar CV también en móvil */
+
+.nav-cv {
+  display: inline-flex;
+
+  height: 38px;
+  padding: 0 13px;
+
+  font-size: 0.72rem;
+}
+
+
+/* Hero más limpio en celular */
+
+.hero-visual {
+  display: none;
+}
+
+.hero-grid {
+  gap: 0;
+}
+
+
+/* Evitar que el Hero sea excesivamente largo */
+
+.hero {
+  min-height: auto;
+}
+
+
+/* Un poco menos de espacio en proyectos */
+
+.projects-header {
+  margin-bottom: 35px;
+}
+
+.project {
+  padding: 48px 0;
+}
+
+
+/* Imagen de proyecto un poco más cinematográfica */
+
+.project-preview {
+  aspect-ratio: 1.25;
+}
+
+
+/* Mejor tamaño para títulos de proyectos */
+
+.project-content h3 {
+  font-size: clamp(2.35rem, 11vw, 3rem);
+  line-height: 0.98;
+}
 }
 
 /* ============================= */
