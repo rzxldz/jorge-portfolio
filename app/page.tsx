@@ -1,5 +1,6 @@
 import ThemeToggle from "@/components/ThemeToggle";
 import MobileMenu from "@/components/MobileMenu";
+import ProjectCarousel from "@/components/ProjectCarousel";
 
 const skills = {
   Lenguajes: [
@@ -105,25 +106,16 @@ function ProjectPreview({
 }: {
   number: string;
 }) {
-  if (number === "01") {
+ if (number === "01") {
   return (
-    <div className="project-preview preview-transport-real">
-      <div className="real-browser-bar">
-        <div className="real-browser-dots">
-          <span />
-          <span />
-          <span />
-        </div>
-
-        <div className="real-browser-address">
-          dialtransport.mx
-        </div>
-      </div>
-
-      <img
-        src="/projects/dial-transport.png"
-        alt="Sitio web de Dial Transport mostrando su flotilla de vehículos"
-        className="dial-transport-image"
+    <div className="project-preview">
+      <ProjectCarousel
+        alt="Dial Transport"
+        images={[
+          "/projects/dial/dial-transport-1.png",
+          "/projects/dial/dial-transport-2.png",
+          "/projects/dial/dial-transport-3.png",
+        ]}
       />
     </div>
   );
@@ -131,23 +123,15 @@ function ProjectPreview({
 
   if (number === "02") {
   return (
-    <div className="project-preview preview-interactive-real">
-      <div className="real-browser-bar">
-        <div className="real-browser-dots">
-          <span />
-          <span />
-          <span />
-        </div>
-
-        <div className="real-browser-address">
-          experiencia-interactiva
-        </div>
-      </div>
-
-      <img
-        src="/projects/experiencia-web-interactiva.png"
-        alt="Experiencia web interactiva desarrollada por Jorge Roldán"
-        className="interactive-project-image"
+    <div className="project-preview">
+      <ProjectCarousel
+        alt="Experiencia Web Interactiva"
+        images={[
+          "/projects/rebbeca/rebbeca-1.png",
+          "/projects/rebbeca/rebbeca-2.png",
+          "/projects/rebbeca/rebbeca-3.png",
+          "/projects/rebbeca/rebbeca-4.png",
+        ]}
       />
     </div>
   );
