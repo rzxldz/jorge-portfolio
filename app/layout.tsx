@@ -41,16 +41,27 @@ export const metadata: Metadata = {
     type: "website",
 
     locale: "es_MX",
+
+    images: [
+  {
+    url: "/opengraph-image",
+    width: 1200,
+    height: 630,
+    alt: "Portfolio de Jorge Emmanuel Roldán Márquez",
+  },
+],
   },
 
   twitter: {
-    card: "summary_large_image",
+  card: "summary_large_image",
 
-    title: "Jorge Emmanuel Roldán Márquez | Portfolio",
+  title: "Jorge Emmanuel Roldán Márquez | Portfolio",
 
-    description:
-      "Software · Web · Mobile. Proyectos, habilidades y formación.",
-  },
+  description:
+    "Software · Web · Mobile. Proyectos, habilidades y formación.",
+
+  images: ["/opengraph-image"],
+},
 };
 
 export default function RootLayout({

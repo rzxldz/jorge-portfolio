@@ -4020,12 +4020,18 @@ a:hover .arrow {
   }
 
   .hero-visual {
-    justify-self:
-      center;
+  display: flex;
 
-    max-width:
-      490px;
-  }
+  width: 100%;
+  max-width: 330px;
+  height: 330px;
+
+  margin: 35px auto 0;
+
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
 
   .scroll-indicator {
     display:
@@ -4244,9 +4250,12 @@ a:hover .arrow {
   }
 
   .hero-visual {
-    max-width:
-      330px;
-  }
+  max-width: 285px;
+  height: 285px;
+  margin-top: 32px;
+  transform: scale(0.92);
+  transform-origin: center;
+}
 
   .float-panel {
     min-width:
@@ -4445,14 +4454,28 @@ a:hover .arrow {
 }
 
 
-/* Hero más limpio en celular */
+/* Hero visual en celular */
 
 .hero-visual {
-  display: none;
+  display: flex;
+
+  width: 100%;
+  max-width: 285px;
+  height: 285px;
+
+  margin: 38px auto 10px;
+
+  position: relative;
+
+  align-items: center;
+  justify-content: center;
+
+  transform: scale(0.92);
+  transform-origin: center;
 }
 
 .hero-grid {
-  gap: 0;
+  gap: 20px;
 }
 
 
