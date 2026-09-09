@@ -438,12 +438,14 @@ export default function Home() {
 
     <div className="profile-photo-wrapper">
       <div className="profile-photo-ring">
-        <img
-          src="/profile/jorge.jpeg"
-          alt="Jorge Emmanuel Roldán Márquez"
-          className="profile-photo"
-        />
-      </div>
+  <div className="profile-photo-clip">
+    <img
+      src="/profile/jorge.jpeg"
+      alt="Jorge Emmanuel Roldán Márquez"
+      className="profile-photo"
+    />
+  </div>
+</div>
 
       <div className="profile-photo-info">
         <strong>Jorge Roldán</strong>
