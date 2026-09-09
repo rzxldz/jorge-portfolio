@@ -235,6 +235,37 @@ main {
     width 160ms ease;
 }
 
+/* ============================= */
+/* ACTIVE NAV */
+/* ============================= */
+
+.nav-links a.active {
+  color: var(--text);
+}
+
+.nav-links a.active::after {
+  width: 100%;
+  background: var(--accent);
+}
+
+.nav-links a.active::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: -11px;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  transform: translateY(-50%);
+}
+
 .nav-links a:hover {
   color:
     var(--text);
@@ -4129,4 +4160,16 @@ a:hover .arrow {
     justify-self:
       start;
   }
+}
+
+/* ============================= */
+/* SECTION SCROLL OFFSET */
+/* ============================= */
+
+#sobre-mi,
+#proyectos,
+#habilidades,
+#trayectoria,
+#contacto {
+  scroll-margin-top: 95px;
 }

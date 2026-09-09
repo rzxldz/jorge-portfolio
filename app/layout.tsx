@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ScrollEffects from "@/components/ScrollEffects";
+import ActiveNav from "@/components/ActiveNav";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -60,9 +61,10 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body>
-        <ScrollEffects />
-        {children}
-      </body>
+  <ScrollEffects />
+  <ActiveNav />
+  {children}
+</body>
     </html>
   );
 }
