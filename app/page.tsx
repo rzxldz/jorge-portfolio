@@ -111,29 +111,93 @@ const projects: Project[] = [
   {
     number: "03",
 
-    subtitle: "Identidad profesional",
+    subtitle: "Aplicación móvil Android",
 
-    title: "Portfolio Personal",
+    title: "RolTrack",
 
     description:
-      "Portfolio creado para presentar mis proyectos, habilidades, formación y perfil profesional mediante una experiencia clara y responsive.",
+      "Aplicación Android para seguimiento de hábitos y progreso físico. Integra hidratación, alimentación, sueño y ejercicio junto con generación de rutinas, planes alimenticios y registro de carreras mediante GPS.",
 
     work:
-      "Arquitectura de contenido, diseño de interfaz, modo claro y oscuro, experiencia responsive, animaciones y despliegue.",
+      "Desarrollo de la arquitectura de la aplicación, persistencia local con Room, módulos de seguimiento de hábitos, generación de planes personalizados, visualización de progreso y tracking GPS con Google Maps.",
 
     tech: [
-      "Next.js",
-      "TypeScript",
-      "CSS",
-      "Git",
-      "Vercel",
+      "Java",
+      "Android",
+      "Room",
+      "SQLite",
+      "Google Maps",
+      "MPAndroidChart",
+      "MVVM",
     ],
 
-    live:
-      "https://jorge-portfolio-mu.vercel.app/",
+    live: "",
 
     github:
-      "https://github.com/rzxldz/jorge-portfolio",
+      "https://github.com/rzxldz/RolTrack",
+
+    caseStudy: {
+      objective:
+        "Centralizar el seguimiento de hábitos, progreso físico y actividad deportiva dentro de una sola aplicación Android.",
+
+      work:
+        "Desarrollé módulos para hidratación, alimentación, sueño y ejercicio, además del perfil del usuario, seguimiento de peso, generación de rutinas, planes alimenticios y registro de carreras.",
+
+      challenge:
+        "Integrar distintos tipos de información y funcionalidades, incluyendo datos persistentes y seguimiento GPS, manteniendo una estructura organizada y una experiencia consistente.",
+
+      solution:
+        "Separé la aplicación mediante ViewModels, repositories, DAOs y Room, utilizando servicios de localización para registrar recorridos y Google Maps para visualizarlos.",
+
+      result:
+        "Una aplicación Android funcional con seguimiento de hábitos, historial local, generación de planes, progreso físico y registro de carreras con distancia, tiempo, ritmo y recorrido GPS.",
+    },
+  },
+
+  {
+    number: "04",
+
+    subtitle: "Sistemas embebidos",
+
+    title: "Torreta Inteligente",
+
+    description:
+      "Sistema embebido que integra una aplicación Android con un microcontrolador STM32 para controlar una torreta física mediante Bluetooth y recibir telemetría del sistema.",
+
+    work:
+      "Desarrollo de la aplicación Android en Kotlin, implementación de la comunicación Bluetooth y telemetría, integración del software con el STM32 y conexión y pruebas de los componentes electrónicos. La estructura física fue construida por Jorge Olaf Quijas Pérez.",
+
+    tech: [
+      "Kotlin",
+      "Jetpack Compose",
+      "STM32",
+      "Bluetooth",
+      "UART",
+      "C",
+      "Embedded Systems",
+    ],
+
+    live: "",
+
+    github:
+      "https://github.com/rzxldz/Torreta-STM32-Android",
+
+    caseStudy: {
+      objective:
+        "Integrar una aplicación móvil con un sistema embebido capaz de controlar una torreta física y mostrar información de telemetría en tiempo real.",
+
+      work:
+        "Me encargué del desarrollo del software, la aplicación Android, la comunicación Bluetooth, la integración con el STM32 y la conexión y pruebas del hardware. Jorge Olaf Quijas Pérez se encargó principalmente de la construcción física de la torreta y apoyó en la selección de componentes.",
+
+      challenge:
+        "Coordinar la comunicación entre Android, el módulo HC-05, el STM32, sensores y actuadores para que los comandos y la telemetría funcionaran de forma consistente en el prototipo físico.",
+
+      solution:
+        "Implementé la aplicación en Kotlin con Jetpack Compose y una capa de comunicación Bluetooth. El STM32 recibe los comandos mediante UART y controla el servomotor, el sistema de disparo y la lectura del sensor ultrasónico.",
+
+      result:
+        "Un prototipo funcional con control manual y automático, movimiento de la torreta, activación del disparo y visualización de telemetría desde una aplicación Android.",
+    },
   },
 ];
 
@@ -144,6 +208,7 @@ const skills = [
     items: [
       "C",
       "Java",
+      "Kotlin",
       "Python",
       "JavaScript",
       "HTML",
@@ -158,6 +223,8 @@ const skills = [
     items: [
       "Desarrollo web",
       "Desarrollo móvil",
+      "Jetpack Compose",
+      "Sistemas embebidos",
       "Responsive",
       "POO",
       "Estructuras de datos",
@@ -169,6 +236,8 @@ const skills = [
     title: "Datos y servicios",
     items: [
       "MySQL",
+      "SQLite",
+      "Room",
       "Firebase",
       "Google Maps API",
     ],
@@ -194,6 +263,7 @@ const skills = [
     items: [
       "Arduino",
       "Raspberry Pi",
+      "STM32",
     ],
   },
 
@@ -252,39 +322,31 @@ function ProjectPreview({
     );
   }
 
-  return (
-    <div className="project-preview preview-portfolio">
-      <div className="portfolio-window">
-        <div className="portfolio-sidebar">
-          <strong>JR.</strong>
-
-          <span>01</span>
-          <span>02</span>
-          <span>03</span>
-        </div>
-
-        <div className="portfolio-screen">
-          <span className="screen-label">
-            PORTFOLIO · 2026
-          </span>
-
-          <h4>
-            Jorge
-            <br />
-            Roldán
-          </h4>
-
-          <div className="screen-lines">
-            <span />
-            <span />
-            <span />
-          </div>
-
-          <div className="screen-pill">
-            SOFTWARE · WEB · MOBILE
-          </div>
-        </div>
+  if (number === "03") {
+    return (
+      <div className="project-preview">
+        <ProjectCarousel
+          alt="RolTrack"
+          images={[
+            "/projects/roltrack/roltrack-1-dashboard.png",
+            "/projects/roltrack/roltrack-2-habitos.png",
+            "/projects/roltrack/roltrack-3-rutina.png",
+            "/projects/roltrack/roltrack-4-running.png",
+          ]}
+        />
       </div>
+    );
+  }
+
+  return (
+    <div className="project-preview">
+      <ProjectCarousel
+        alt="Torreta Inteligente STM32"
+        images={[
+          "/projects/torreta/torreta-1-telemetria.png",
+          "/projects/torreta/torreta-2-control-bluetooth.png",
+        ]}
+      />
     </div>
   );
 }
@@ -756,35 +818,21 @@ export default function Home() {
                   </div>
 
                   <div className="project-links">
-                    <a
-                      href={project.live}
-                      target={
-                        project.live !== "#"
-                          ? "_blank"
-                          : undefined
-                      }
-                      rel={
-                        project.live !== "#"
-                          ? "noreferrer"
-                          : undefined
-                      }
-                    >
-                      Ver proyecto
-                      <Arrow />
-                    </a>
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Ver proyecto
+                        <Arrow />
+                      </a>
+                    )}
 
                     <a
                       href={project.github}
-                      target={
-                        project.github !== "#"
-                          ? "_blank"
-                          : undefined
-                      }
-                      rel={
-                        project.github !== "#"
-                          ? "noreferrer"
-                          : undefined
-                      }
+                      target="_blank"
+                      rel="noreferrer"
                     >
                       GitHub
                       <Arrow />
@@ -805,24 +853,6 @@ export default function Home() {
             ))}
           </div>
 
-
-          <div className="future-project">
-            <span>
-              PRÓXIMAMENTE
-            </span>
-
-            <div>
-              <strong>
-                Aplicación móvil de seguimiento físico
-              </strong>
-
-              <p>
-                Se añadirá al portfolio cuando exista
-                nuevamente una versión funcional que
-                pueda mostrarse correctamente.
-              </p>
-            </div>
-          </div>
 
         </div>
       </section>
